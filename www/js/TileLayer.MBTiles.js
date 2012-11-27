@@ -1,9 +1,8 @@
 L.TileLayer.MBTiles = L.TileLayer.extend({
-	mbTilesDB: null,
+	db: null,
 
 	initialize: function(url, options, db) {
-		this.mbTilesDB = db;
-                                         console.log('init mbtiles');
+		this.db = db;
 
 		L.Util.setOptions(this, options);
 	},
@@ -12,13 +11,26 @@ L.TileLayer.MBTiles = L.TileLayer.extend({
 		var x = tilePoint.x;
 		var y = tilePoint.y;
 		var base64Prefix = 'data:image/gif;base64,';
-                                         
-        this.mbTilesDB.transaction(function(tx) {
-           tx.executeSql("SELECT tile_data FROM images INNER JOIN map ON images.tile_id = map.tile_id WHERE zoom_level = ? AND tile_column = ? AND tile_row = ?", [z, x, y], function (tx, res) {
-                        tile.src = base64Prefix + res.rows.item(0).tile_data;
-                       }, function (er) {
-                       console.log('error with executeSql', er);
-                       });
+
+        this.db.transaction(function(tx) {
+            tx.executeSql(
+                "SELECT tile_data FROM images " +
+                "INNER JOIN map ON images.tile_id = map.tile_id " +
+                "WHERE zoom_level = ? " +
+                "AND tile_column = ? " +
+                "AND tile_row = ?",
+//                "SELECT tile_data FROM tiles " +
+//                "WHERE zoom_level = ? " +
+//                "AND tile_column = ? " +
+//                "AND tile_row = ?",
+                [z, x, y],
+                function (tx, res) {
+                    tile.src = base64Prefix + res.rows.item(0).tile_data;
+                },
+                function (er) {
+                    console.log('error with executeSql', er);
+                }
+            );
         });
 
 

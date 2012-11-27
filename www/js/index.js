@@ -1,11 +1,8 @@
 document.addEventListener("deviceready", init, false);
 
-var localFileName;	// the filename of the local mbtiles file
-var remoteFile;		// the url of the remote mbtiles file to be downloaded
-var msg;			// the span to show messages
-
-localFileName = 'test.mbtiles';
-remoteFile = 'http://dl.dropbox.com/u/14814828/OSMBrightSLValley.mbtiles';
+var localFileName = 'test.mbtiles';
+var remoteFile = 'https://dl.dropbox.com/s/jllnjvlwvhfqys1/test.mbtiles?dl=1';
+var msg;
 
 function init() {
 	var fs;
@@ -16,7 +13,6 @@ function init() {
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
 		fs = fileSystem;
 
-		// check to see if files already exists
 		var file = fs.root.getFile(localFileName, {create: false}, function () {
 			msg.innerHTML = 'File already exists on device. Building map...';
 
@@ -28,7 +24,7 @@ function init() {
 			ft.download(remoteFile, fs.root.fullPath + '/' + localFileName, function (entry) {
 				buildMap();
 			}, function (error) {
-				console.log('error with download', error);
+				console.log(error);
 			});
 		});
 	});
