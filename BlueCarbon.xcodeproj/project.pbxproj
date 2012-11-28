@@ -42,6 +42,7 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E1352710E2C1420031B30D /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* Cordova.plist */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		661A44FE1664DF1900BD617B /* leaflet-0.4.js in Sources */ = {isa = PBXBuildFile; fileRef = 661A44FD1664DF1900BD617B /* leaflet-0.4.js */; };
 		668D716E16639A9F00994307 /* core.css in Resources */ = {isa = PBXBuildFile; fileRef = 668D715D16639A9F00994307 /* core.css */; };
 		668D716F16639A9F00994307 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 668D715E16639A9F00994307 /* index.css */; };
 		668D717016639A9F00994307 /* core.js in Sources */ = {isa = PBXBuildFile; fileRef = 668D716016639A9F00994307 /* core.js */; };
@@ -54,8 +55,6 @@
 		668D717716639A9F00994307 /* popup-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 668D716916639A9F00994307 /* popup-close.png */; };
 		668D717816639A9F00994307 /* zoom-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 668D716A16639A9F00994307 /* zoom-in.png */; };
 		668D717916639A9F00994307 /* zoom-out.png in Resources */ = {isa = PBXBuildFile; fileRef = 668D716B16639A9F00994307 /* zoom-out.png */; };
-		668D717A16639A9F00994307 /* leaflet.css in Resources */ = {isa = PBXBuildFile; fileRef = 668D716C16639A9F00994307 /* leaflet.css */; };
-		668D717B16639A9F00994307 /* leaflet.js in Sources */ = {isa = PBXBuildFile; fileRef = 668D716D16639A9F00994307 /* leaflet.js */; };
 		669D6A421663AFFD003A6DF8 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 669D6A411663AFFD003A6DF8 /* SQLitePlugin.m */; };
 		669D6A441663BABF003A6DF8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 669D6A431663BABF003A6DF8 /* libsqlite3.0.dylib */; };
 		669D6AE01663FA2D003A6DF8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 669D6ADF1663FA2D003A6DF8 /* NSData+Base64.m */; };
@@ -119,6 +118,7 @@
 		30E1352610E2C1420031B30D /* Cordova.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cordova.plist; path = ../Cordova.plist; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* BlueCarbon-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlueCarbon-Prefix.pch"; sourceTree = "<group>"; };
+		661A44FD1664DF1900BD617B /* leaflet-0.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "leaflet-0.4.js"; sourceTree = "<group>"; };
 		668D715D16639A9F00994307 /* core.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = core.css; sourceTree = "<group>"; };
 		668D715E16639A9F00994307 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
 		668D716016639A9F00994307 /* core.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = core.js; sourceTree = "<group>"; };
@@ -131,8 +131,6 @@
 		668D716916639A9F00994307 /* popup-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popup-close.png"; sourceTree = "<group>"; };
 		668D716A16639A9F00994307 /* zoom-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoom-in.png"; sourceTree = "<group>"; };
 		668D716B16639A9F00994307 /* zoom-out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoom-out.png"; sourceTree = "<group>"; };
-		668D716C16639A9F00994307 /* leaflet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = leaflet.css; sourceTree = "<group>"; };
-		668D716D16639A9F00994307 /* leaflet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = leaflet.js; sourceTree = "<group>"; };
 		668D717C16639E8A00994307 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		669D6A401663AFFD003A6DF8 /* SQLitePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLitePlugin.h; sourceTree = "<group>"; };
 		669D6A411663AFFD003A6DF8 /* SQLitePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLitePlugin.m; sourceTree = "<group>"; };
@@ -360,9 +358,8 @@
 		668D716416639A9F00994307 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				661A44FD1664DF1900BD617B /* leaflet-0.4.js */,
 				668D716516639A9F00994307 /* images */,
-				668D716C16639A9F00994307 /* leaflet.css */,
-				668D716D16639A9F00994307 /* leaflet.js */,
 			);
 			name = libs;
 			path = www/libs;
@@ -481,7 +478,6 @@
 				668D717716639A9F00994307 /* popup-close.png in Resources */,
 				668D717816639A9F00994307 /* zoom-in.png in Resources */,
 				668D717916639A9F00994307 /* zoom-out.png in Resources */,
-				668D717A16639A9F00994307 /* leaflet.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,9 +512,9 @@
 				668D717116639A9F00994307 /* index.js in Sources */,
 				668D717216639A9F00994307 /* sqlite_plugin.js in Sources */,
 				668D717316639A9F00994307 /* TileLayer.MBTiles.js in Sources */,
-				668D717B16639A9F00994307 /* leaflet.js in Sources */,
 				669D6A421663AFFD003A6DF8 /* SQLitePlugin.m in Sources */,
 				669D6AE01663FA2D003A6DF8 /* NSData+Base64.m in Sources */,
+				661A44FE1664DF1900BD617B /* leaflet-0.4.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
